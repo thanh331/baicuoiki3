@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>đăng nhập bài cuối kì</title>
+    <script type="text/javascript" lang="javascript">
+        function layGiaTri(){
+            var user="", pass="";
+            user=document.getElementById("username").value;
+            pass=document.getElementById("password").value;
+            if(user==""){
+                alert("bạn không được để trống tài khoản ! Vui lòng nhập lại");
+                document.getElementById("username").focus();
+            }
+            else
+                if(pass==""){
+                    alert("Bạn không được để trống mật khẩu ! Vui lòng nhập lại");
+                    document.getElementById("username").value;
+                    document.getElementById("password").value;
+                    document.getElementById("username").focus;
+        }
+            else
+                
+                    window.location.assign("index.html")//đg link dẫn tới trâng chủ
+                
+        let kq="Ban da nhap : Username: "+user+"<br/>Password: "+pass;
+        document.getElementById("ketqua").innerHTML=kq;
+    }
+    </script>
+</head>
+<body onload="moCuaSomoi()";>
+    <div  style="text-align:center">
+<img src="./taoanhdep_logo_mascot_anonymous_76112.png" width="1400" height="400">
+    </div>
+    <h2 style="text-align:center;">Đăng nhập</h2>
+    <form  style="text-align:center">
+        <table style="margin:0 auto;">
+        Tài khoản : <input type="text" id="username"><br/>
+        Mật khẩu : <input type="password" id="password"><br/>
+            <input type="button" onclick="layGiaTri();" value="Đăng nhập";>
+        <p id="ketqua">  </p>
+    </table>
+    </form>
+</body>
+</html>

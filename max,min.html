@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+ <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Max and Min</title>
+        <script type="text/javascript" language="javascrist"> 
+            function findMaxMin() {
+                var num1 = parseFloat(document.getElementById("num1").value);
+                var num2 = parseFloat(document.getElementById("num2").value);
+                var max = Math.max(num1, num2); 
+                var min = Math.min(num1, num2);
+                document.getElementById("max").innerHTML = "Max: " + max; 
+                document.getElementById("min").innerHTML = "Min: " + min; 
+                                  } 
+        </script>
+    </head>
+     <body>
+         <h1>Find Max and Min</h1> 
+         <p>Nhập hai số:</p>
+         <input type="number" id="num1"> 
+         <input type="number" id="num2"> 
+         <button onclick="findMaxMin()">Tìm Max và Min</button> 
+         <p id="max"></p> 
+         <p id="min"></p> 
+        </body> 
+        </html>
+
+        ///////
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Min Example</title>
+</head>
+<body>
+<h2>Find Max and Min Value</h2>
+<p>Nhập danh sách các số cách nhau bằng dấu phẩy:</p>
+<input type="text" id="numbersInput">
+<button onclick="findMaxMin()">Find  Max and Min</button>
+<p id="result"></p>
+
+<script>
+function findMaxMin() {
+    let numbersInput = document.getElementById("numbersInput").value;
+    let numbers = numbersInput.split(",").map(Number);
+
+    let max = Math.max(...numbers);
+    let min = Math.min(...numbers);
+
+    document.getElementById("result").innerText = `Max: ${max}, Min: ${min}`;
+}
+</script>
+</body>
+</html>

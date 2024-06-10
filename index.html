@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shoe Store</title>
+<link rel="stylesheet" href="baicuoiki3.css" type="text/css">
+<script src="./jquery-3.7.1.js"></script>
+</head>
+<body>
+<header>
+    <div  style="text-align:center">
+        <img src="./taoanhdep_logo_mascot_anonymous_76112.png" width="200" height="200">
+    </div>
+<h1>Shop Thanh</h1>
+<nav class="nav">
+    <ul>
+      <li><a href="./index.html">Trang chủ</a></li>
+      <li><a href="#hot">Chương trình hot</a></li>
+      <li><a href="#sanpham">Sản phẩm</a></li>
+      <li><a href="./giohang.html">Giỏ hàng</a></li>
+      <li><a href="#lienhe">Liên hệ</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="demosline">
+    <img src="./taoanhdep_logo_mascot_anonymous_76112.png" width="1200px" height="200px">
+    <img src="./7d9bdb10-shop-ban-giay-sneaker-uy-tin-tren-shopee-10.jpg" width="1200px" height="200px">
+    <img src="./cach-kinh-doanh-shop-giay-2.jpg" width="1200px" height="200px">
+    <img src="./thiet-ke-shop-giay-dep-nho.jpg" width="1200px" height="200px">
+</div>    
+<script>
+    $(function(){
+        $('.demosline ing:gt(0)').hide();
+        setInterval(function(){
+            $('.demosline :first-child').fadeOut() //fadeout là ânhr đang hiện
+            .next('img').fadeIn() //fadein ảnh tiếp theo
+            .end().appendTo('.demosline'); // chuyển vị trí ảnh xuống cuối
+        }, 3000);
+    })
+</script>
+<marquee><font color="black" size="15pt">Chào mừng mọi người tới Shop Thanh, Shop sẽ mang tới mọi người những sản phẩm mới nhất cho mọi người </font></marquee>
+<section id="sanpham">
+<h2>Sản phẩm</h2><br>
+</section>
+<script>
+    // Hàm thay đổi ảnh khi di chuột vào
+    function changeImage() {
+        document.getElementById("myImage").src = "giaynikeforce1anh2.webp";
+    }
+
+    // Hàm trở lại ảnh ban đầu khi di chuột ra
+    function revertImage() {
+        document.getElementById("myImage").src = "giaynikeforce1.webp";
+    }
+</script>
+<script>
+    // Hàm thay đổi ảnh khi di chuột vào
+    function vao() {
+        document.getElementById("vd").src = "giaydo2.jpg";
+    }
+
+    // Hàm trở lại ảnh ban đầu khi di chuột ra
+    function ra() {
+        document.getElementById("vd").src = "giaydo1.webp";
+    }
+</script>
+<script>
+    // Hàm thay đổi ảnh khi di chuột vào
+    function hien() {
+        document.getElementById("cc").src = "giaynau2.jpg";
+    }
+
+    // Hàm trở lại ảnh ban đầu khi di chuột ra
+    function mat() {
+        document.getElementById("cc").src = "giaynau1.jpg";
+    }
+</script>
+<main>
+    <div class="image-container">
+        <section class="product">
+            <img id="myImage" class="dm" src="giaynikeforce1.webp" alt="Shoe1" onmouseover="changeImage()" onmouseout="revertImage()">
+    <h2>Nike Air Force 1 Trắng</h2>
+        <p>Giá 950,000đ</p>
+    <a href="giohang.html"><button>Mua Ngay</button></a>
+        </section></section>
+        <section class="product">
+            <img id="vd" class="dm" src="giaydo1.webp" alt="Shoe2" onmouseover="vao()" onmouseout="ra()">
+    <h2>NIKE DUNK LOW SP UNIVERSITY RED</h2>
+        <p>Giá 950,000đ</p>
+    <a href="giohang.html"><button>Mua Ngay</button></a>
+        </section>
+        <section class="product">
+            <img id="cc" class="dm" src="giaynau1.jpg" alt="Shoe3" onmouseover="hien()" onmouseout="mat()">
+    <h2>Travis Scott x Air Jordan 1 OG High</h2>
+        <p>Giá 950,000đ</p>
+    <a href="giohang.html"><button>Mua Ngay</button></a>
+        </section>
+</div>
+</main>
+<main>
+   <section id="hot">
+    <h2>Chương trình hot</h2>
+        <section class="cth">
+            <img src="./7d9bdb10-shop-ban-giay-sneaker-uy-tin-tren-shopee-10.jpg" alt="" width="100" height="100">
+                <p>Năm 2024, Nike đã cho ra mắt liên tục các mẫu giày mới của mình, không thể không kể đến những đôi giày thuộc dòng Air Jordan đình đám của hãng.</p>
+        </section></section>
+</main>
+<h2>Thông tin sản phẩm</h2>
+<div class="container">
+    <a href="https://extrim.vn/blog/phan-biet-giay-nike-air-force-1-that-hay-gia">
+      <img src="giaynikeforce1.webp" alt="giày xịn" width="300" height="300">
+      <div class="text"><h2>Nhấn để có thể xem thông tin sản phẩm</h2></div>
+    </a>
+  </div>
+  <div class="container">
+    <a href="https://authentic-shoes.com/blogs/news/cach-phan-biet-off-white-x-nike-dunk-university-red-real-va-fake">
+      <img src="giaydo1.webp" alt="giày xịn" width="300" height="300">
+      <div class="text"><h2>Nhấn để có thể xem thông tin sản phẩm</h2></div>
+    </a>
+  </div>
+  <div class="container">
+    <a href="https://fado.vn/blog/giay-jordan-1-travis-scott.n52301/">
+      <img src="giaynau1.jpg" alt="giày xịn" width="300" height="300">
+      <div class="text"><h2>Nhấn để có thể xem thông tin sản phẩm</h2></div>
+    </a>
+  </div>
+<section id="lienhe">
+    <h2>Liên hệ</h2>
+    <p>Địa chỉ: Tràng An, Chương Mỹ, Hà Nội</p>
+    <p>Điện thoại: 0357681909</p>
+    <p>Email: trannnthanh05@gmail.com</p>
+    <form>
+      <label for="name">Họ và Tên</label>
+            <input type="text" id="name" name="name"><br>
+    <label for="messgage">Nội dung</label>
+            <input type="text" id="messgage" name="messgage"> 
+            <button type="submit">Gửi</button>
+          </form>
+  </section>
+<footer>
+<p>&copy; 2024 Shop Thanh</p>
+</footer>
+</body>
+</html>

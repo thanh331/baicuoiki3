@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng bán giày</title>
+    <style>
+        /* Thêm CSS cho trang web của bạn ở đây */
+        /* Ví dụ: */
+        h1{
+            text-align: center;
+            color: rgb(255, 127, 223);
+        }
+        body{
+            text-align: center;
+        }
+        .product {
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+            float: left;
+            
+        }
+        .products-container {
+            display: flex; /* Sử dụng flexbox để đặt các sản phẩm cùng hàng */
+            flex-wrap: wrap; /* Cho phép các sản phẩm xuống dòng khi hết chỗ */
+            justify-content: center; /* Căn giữa các sản phẩm */
+        }
+        .product img {
+            max-width: 1000px;
+            max-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <a href="./index.html"><h2>Quay lại Trang chủ</h2></a>
+    <img src="./taoanhdep_logo_mascot_anonymous_76112.png" width="80" height="60"><h1>Giỏ hàng Shop Thanh</h1>
+    <div class="products-container"> <!-- Thêm một div để chứa các sản phẩm -->
+    <div class="product">
+        <img src="./giaynikeforce1.webp" alt="Shoe1" style="width:100%">
+        <h2>Nike Air Force 1 Trắng</h2>
+        <p>Giá: 950,000$</p>
+        <p>Số lượng: <input type="number" value="1" min="-1" onchange="updateTotal()"></p>
+        <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+    </div>
+    <!-- Thêm nhiều sản phẩm khác nếu cần -->
+    <div class="product">
+        <img src="./giaydo1.webp" alt="Shoe2" style="width:100%">
+        <h2>NIKE DUNK LOW SP UNIVERSITY RED</h2>
+        <p>Giá: 950,000$</p>
+        <p>Số lượng: <input type="number" value="1" min="-1" onchange="updateTotal()"></p>
+        <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+    </div>
+    <div class="product">
+        <img src="./giaynau1.jpg" alt="Shoe3" style="width:100%">
+        <h2>Travis Scott x Air Jordan 1 OG High</h2>
+        <p>Giá: 950,000$</p>
+        <p>Số lượng: <input type="number" value="1" min="-1" onchange="updateTotal()"></p>
+        <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+    </div>
+    </div>
+
+    <h2 id="total">Tổng cộng: 0$</h2>
+    <button onclick="checkout()">Thanh toán</button>
+
+    <script>
+        var products = document.querySelectorAll('.product');
+        var totalPrice = 0;
+
+        function updateTotal() {
+            totalPrice = 0;
+            products.forEach(function(product) {
+                var price = 950000; // Giá của mỗi sản phẩm
+                var quantity = parseInt(product.querySelector('input[type="number"]').value);
+                totalPrice += price * quantity;
+            });
+            document.getElementById("total").innerText = "Tổng cộng: $" + totalPrice;
+        }
+
+        function addToCart() {
+           
+            // Thêm logic để thêm sản phẩm vào giỏ hàng ở đây
+        }
+
+        function checkout() {
+            // Thêm logic để xử lý thanh toán ở đây
+            alert("Thanh toán thành công!");
+            // Đặt lại tổng cộng về 0 sau khi thanh toán
+            totalPrice = 0;
+            document.getElementById("total").innerText = "Tổng cộng: $" + totalPrice;
+        }
+    </script>
+</body>
+</html>
